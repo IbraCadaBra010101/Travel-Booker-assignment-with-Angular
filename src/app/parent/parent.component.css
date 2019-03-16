@@ -1,0 +1,11 @@
+
+.card
+{
+  border-color: black;
+  color: white;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 280px;
+  background-color: #c5b88a;
+  border-radius: 3px;
+}

@@ -1,0 +1,36 @@
+<!--<div class="card">-->
+  <!--<div class="card-body">-->
+    <!--<h5 class="card-title"> show this</h5>-->
+    <!--<p class="card-text"> and this</p>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<div class="card" *ngIf="cities; else defaults">
+   <div class="card-body">
+    <h5 class="card-title">{{cities.name}}</h5>
+    <p class="card-text">{{cities.info}}</p>
+   </div>
+</div>
+
+
+  <ng-template class="card" #defaults>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rom</h5>
+        <p class="card-text">Rom bjuder på mer än Colosseum och Vatikanen. Den senaste tiden har
+          många nya barer och restauranger öppnat och romarna är fulla av energi
+          och visar att den antika staden inte bara består av gamla klassiker.
+          Här finns också mycket att se för den som är intresserad av mode och
+          arkitektur, långt ifrån de mest uppenbara attraktionerna. Ett exempel är
+          modehuset Fendis nya högkvarter i det kvadratformade Colosseum. Eller den
+          för detta el- och gascentralen Montemartini som har en av stadens största
+          samlingar av romerska statyer.
+          Eller ät på Il Mazzo, en av Italiens mest innovativa restauranger.
+        </p>
+      </div>
+    </div>
+
+  </ng-template>
+
+<app-child [childMessage]="parentMessage" (citiesEvent)="receiveMessage($event)"></app-child>

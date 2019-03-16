@@ -1,0 +1,8 @@
+<div class="container">
+    <div id="trafficLight">
+         <div [ngClass]="red ? 'red' : 'off'"></div>
+        <div [ngClass]="yellow ? 'yellow' : 'off'"></div>
+        <div [ngClass]="green ? 'green' : 'off'" ></div>
+    </div>
+  <button class="drive-btn" (click)="ClickToDrive()">Drive</button>
+</div>
